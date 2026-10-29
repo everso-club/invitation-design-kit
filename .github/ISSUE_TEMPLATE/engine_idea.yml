@@ -1,0 +1,21 @@
+name: Engine idea
+description: Something a design can't do today, such as a new layout, animation, section or setting.
+labels: [engine-idea]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What would you like an invitation to do or look like? Sketches and references help (please don't share other studios' invitations as references).
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Who it's for
+      description: Which kind of event or host it would suit, and why it matters to them.
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Is it a new setting for an existing engine, or a new engine?
+      options: [A new setting for Kalyana, A new engine, Not sure]

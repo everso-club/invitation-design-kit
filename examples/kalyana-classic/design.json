@@ -1,0 +1,23 @@
+{
+  "id": "kalyana-classic",
+  "engine": "kalyana",
+  "name": "Kalyana · Classic",
+  "description": "South Indian heritage — carved doors, banana leaves, brass lamps, scratch-to-reveal dates and falling petals.",
+  "tier": "free",
+  "eventTypes": [
+    "Wedding"
+  ],
+  "sortOrder": 10,
+  "featured": true,
+  "thumbnail": "./thumbnail.jpg",
+  "changelog": "The original Kalyana look, published from the repo.",
+  "author": {
+    "name": "Everso",
+    "email": "contact@everso.club",
+    "url": "https://everso.club"
+  },
+  "credits": {
+    "artwork": "Painted for Everso with an image model (Gemini), cut out and finished by hand."
+  },
+  "settings": {}
+}

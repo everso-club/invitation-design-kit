@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Submit a design
+    url: https://github.com/everso-club/invitation-design-kit/blob/main/docs/submitting.md
+    about: Designs are sent by email, not as issues. Here's how.
+  - name: Questions for Everso
+    url: mailto:contact@everso.club
+    about: Anything else, including partnerships and licensing.

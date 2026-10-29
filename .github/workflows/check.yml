@@ -1,0 +1,34 @@
+# Runs the kit's own checks on every pull request and push to main: the
+# examples must pass, and the tools must still work end to end.
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Examples and tools (Node ${{ matrix.node }}, ${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Examples pass every check
+        run: npm run check -- --all
+      - name: New → check → pack works
+        shell: bash
+        run: |
+          npm run new -- ci-smoke-test --from kalyana-peacock
+          node -e "const f='designs/ci-smoke-test/design.json',fs=require('fs'),d=JSON.parse(fs.readFileSync(f));d.author={name:'CI',email:'ci@example.com'};d.credits={artwork:'Kit example'};fs.writeFileSync(f,JSON.stringify(d))"
+          npm run pack -- ci-smoke-test
+          ls submissions/ci-smoke-test-*.zip

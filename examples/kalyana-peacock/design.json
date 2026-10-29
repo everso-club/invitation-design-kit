@@ -1,0 +1,49 @@
+{
+  "id": "kalyana-peacock",
+  "engine": "kalyana",
+  "name": "Kalyana · Peacock",
+  "description": "Peacock teal and ivory with brass — painted teal doors, blue-violet petals and a lighter script.",
+  "tier": "free",
+  "eventTypes": ["Wedding", "Celebrations"],
+  "sortOrder": 20,
+  "featured": false,
+  "thumbnail": "./thumbnail.jpg",
+  "changelog": "Example design for the kit.",
+  "author": {
+    "name": "Everso",
+    "email": "contact@everso.club",
+    "url": "https://everso.club"
+  },
+  "credits": {
+    "artwork": "Recoloured from the Kalyana engine's own artwork (door and petals)."
+  },
+  "settings": {
+    "colors": {
+      "backdrop": "#0B2A33",
+      "paper": "#F3EBDD",
+      "paper2": "#E9DEC9",
+      "paper3": "#DDCDB0",
+      "ink": "#0E3B43",
+      "inkSoft": "#3D5F63",
+      "olive": "#6B4E16",
+      "floor": "#0F4C55",
+      "floorDeep": "#0A363D",
+      "dayPage": "#DCEBE6",
+      "eveningTop": "#D9E4E0"
+    },
+    "fonts": {
+      "script": "great-vibes",
+      "serif": "cormorant",
+      "caps": "cinzel"
+    },
+    "art": {
+      "door": "./door.webp",
+      "petals": ["./petal-1.webp", "./petal-2.webp", "./petal-3.webp", "./petal-4.webp", "./petal-5.webp", "./petal-6.webp"]
+    },
+    "wording": {
+      "datesTwo": "Two Blessed Days",
+      "countdownTitle": "Counting the Days",
+      "rsvpTitle": "Will you celebrate with us?"
+    }
+  }
+}

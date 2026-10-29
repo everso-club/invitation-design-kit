@@ -1,0 +1,32 @@
+name: Problem with the kit
+description: A command fails, a check seems wrong, the preview looks broken, or the docs are unclear.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead. Screenshots help.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Terminal output
+      description: The command you ran and everything it printed.
+      render: text
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      description: The output of `node -v`
+      placeholder: v22.11.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [macOS, Windows, Linux]
+    validations:
+      required: true

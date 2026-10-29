@@ -1,0 +1,9 @@
+# Your designs and packages stay on your computer.
+designs/*
+!designs/README.md
+submissions/
+
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
