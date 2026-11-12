@@ -3,7 +3,15 @@
 All notable changes to the kit. Versions follow [semantic versioning](https://semver.org):
 a new major version means existing designs may need changes.
 
-## 1.1.0 — unreleased
+## 1.1.1 — 2026-11-12
+
+- RSVP titles no longer start with “Will you”: Kalyana v1.2.1 defaults to
+  “Your presence is our blessing”, Chapel v1.0.1 to “We’d love to celebrate
+  with you” (`wording.rsvpTitle`; designs that set their own keep it).
+  Kalyana's line under it: “We would be honoured to have you with us.”
+  (`wording.rsvpSub`), so “blessing” isn't said twice.
+
+## 1.1.0 — 2026-11-12
 
 - New engine **Chapel** v1.0.0 (church wedding): an envelope with a wax seal,
   dates under frosted vellum, a stationery card per event, candles in

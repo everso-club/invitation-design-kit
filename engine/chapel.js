@@ -17,7 +17,7 @@ const ART = '/invite-templates/chapel/art';
 export const chapel = {
   id: 'chapel',
   major: 1,
-  version: '1.0.0',
+  version: '1.0.1',
   name: 'Chapel',
   description: 'Church wedding — an envelope with a wax seal, frosted-vellum dates to rub away, stationery cards per event, candles and florals.',
   // How the guest page starts before the data arrives (see kalyana.js).
@@ -143,7 +143,7 @@ export const chapel = {
         { key: 'wording.orderTitle', kind: 'text', label: 'Event cards title', default: 'The Order of the Day', max: 40, focus: 'event' },
         { key: 'wording.countdownTitle', kind: 'text', label: 'Countdown title', default: 'Until we say “I do”', max: 40, focus: 'countdown' },
         { key: 'wording.galleryTitle', kind: 'text', label: 'Album title', default: 'Us, Together', max: 40, focus: 'gallery' },
-        { key: 'wording.rsvpTitle', kind: 'text', label: 'Reply card title', default: 'Will you celebrate with us?', max: 60, focus: 'rsvp' },
+        { key: 'wording.rsvpTitle', kind: 'text', label: 'Reply card title', default: 'We’d love to celebrate with you', max: 60, focus: 'rsvp' },
         { key: 'wording.rsvpSub', kind: 'text', label: 'Reply card line', default: 'Your presence is the greatest gift. Let us know if you can join us.', max: 90, focus: 'rsvp' },
       ],
     },

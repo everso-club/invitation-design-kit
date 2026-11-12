@@ -18,7 +18,7 @@ const ART = '/invite-templates/kalyana/art';
 export const kalyana = {
   id: 'kalyana',
   major: 1,
-  version: '1.2.0',
+  version: '1.2.1',
   name: 'Kalyana',
   description: 'Heritage invitation — opening doors, garlands, scratch-to-reveal dates, falling petals, day/evening scenes.',
   // How the guest page starts before the invitation's data arrives: the colour
@@ -122,8 +122,8 @@ export const kalyana = {
         { key: 'wording.datesMany', kind: 'text', label: 'Dates title — three or more', default: 'The Celebrations', max: 40, focus: 'dates' },
         { key: 'wording.countdownTitle', kind: 'text', label: 'Countdown title', default: 'The Celebration Begins', max: 40, focus: 'countdown' },
         { key: 'wording.galleryTitle', kind: 'text', label: 'Gallery title', default: 'Us, Together', max: 40, focus: 'gallery' },
-        { key: 'wording.rsvpTitle', kind: 'text', label: 'RSVP title', default: 'Will you bless us with your presence?', max: 60, focus: 'rsvp' },
-        { key: 'wording.rsvpSub', kind: 'text', label: 'RSVP line', default: 'Your blessings mean the world to us.', max: 80, focus: 'rsvp' },
+        { key: 'wording.rsvpTitle', kind: 'text', label: 'RSVP title', default: 'Your presence is our blessing', max: 60, focus: 'rsvp' },
+        { key: 'wording.rsvpSub', kind: 'text', label: 'RSVP line', default: 'We would be honoured to have you with us.', max: 80, focus: 'rsvp' },
         { key: 'wording.tapToOpen', kind: 'text', label: 'Door button', default: 'Tap to open', max: 20, focus: 'doors' },
       ],
     },

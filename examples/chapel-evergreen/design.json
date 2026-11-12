@@ -10,7 +10,7 @@
   "sortOrder": 20,
   "featured": false,
   "thumbnail": "./thumbnail.jpg",
-  "changelog": "First version.",
+  "changelog": "Reply card title: \"We’d love to celebrate with you\" instead of \"Will you celebrate with us?\" (hosts asked for a line that doesn't start with \"Will you\").",
   "author": {
     "name": "Everso",
     "email": "contact@everso.club",

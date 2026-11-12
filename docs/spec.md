@@ -8,7 +8,7 @@ setting out of `design.json` to keep the engine's default.
 
 How to use these: [design guide](design-guide.md).
 
-## Engine `kalyana` (v1.2.0)
+## Engine `kalyana` (v1.2.1)
 
 Heritage invitation — opening doors, garlands, scratch-to-reveal dates, falling petals, day/evening scenes.
 
@@ -97,8 +97,8 @@ Section titles for this design. Hosts still write their own names, family lines 
 | `wording.datesMany` | Dates title — three or more | The Celebrations | 40 |
 | `wording.countdownTitle` | Countdown title | The Celebration Begins | 40 |
 | `wording.galleryTitle` | Gallery title | Us, Together | 40 |
-| `wording.rsvpTitle` | RSVP title | Will you bless us with your presence? | 60 |
-| `wording.rsvpSub` | RSVP line | Your blessings mean the world to us. | 80 |
+| `wording.rsvpTitle` | RSVP title | Your presence is our blessing | 60 |
+| `wording.rsvpSub` | RSVP line | We would be honoured to have you with us. | 80 |
 | `wording.tapToOpen` | Door button | Tap to open | 20 |
 
 ### Sharing — `settings.share`
@@ -114,7 +114,7 @@ Write a new line as `\n` in `design.json`. The preview's **Share message** panel
 | `share.previewTitle` | Link preview — title (one line) | 80 | {names} · Wedding Invitation |
 | `share.previewDescription` | Link preview — description (one line) | 160 | {details} · Tap to view the invitation and RSVP |
 
-## Engine `chapel` (v1.0.0)
+## Engine `chapel` (v1.0.1)
 
 Church wedding — an envelope with a wax seal, frosted-vellum dates to rub away, stationery cards per event, candles and florals.
 
@@ -208,7 +208,7 @@ Section titles for this design. Hosts still write their own names, family lines 
 | `wording.orderTitle` | Event cards title | The Order of the Day | 40 |
 | `wording.countdownTitle` | Countdown title | Until we say “I do” | 40 |
 | `wording.galleryTitle` | Album title | Us, Together | 40 |
-| `wording.rsvpTitle` | Reply card title | Will you celebrate with us? | 60 |
+| `wording.rsvpTitle` | Reply card title | We’d love to celebrate with you | 60 |
 | `wording.rsvpSub` | Reply card line | Your presence is the greatest gift. Let us know if you can join us. | 90 |
 
 ### Sharing — `settings.share`
