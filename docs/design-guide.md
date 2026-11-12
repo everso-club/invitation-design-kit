@@ -48,7 +48,7 @@ details. A design never contains them.
 | Field | What it is |
 |---|---|
 | `id` | Permanent. Lowercase letters, numbers and dashes, 3–64 characters, starting with the engine name. Must match the folder name. |
-| `engine` | `kalyana` (the only engine today). |
+| `engine` | Which engine the design dresses, e.g. `kalyana` or `chapel` — see [engines](engines.md). |
 | `name` | Shown to hosts, e.g. `Kalyana · Lotus Pink`. |
 | `description` | One sentence for the picker, 160 characters at most. |
 | `tier` | `free` or `premium`. Everso has the final say. |
@@ -100,6 +100,24 @@ width.
 Section titles only. Keep them short (limits are in the
 [settings reference](spec.md)) and in the spirit of the occasion. Hosts
 replace their own lines anyway: names, family lines, blessings.
+
+## Sharing message
+
+`settings.share` is what a host sends on WhatsApp with the invitation link,
+and the title and line of the link preview card. Write it in the voice of
+your design — a temple-style card and a modern reception card shouldn't sound
+the same.
+
+- Use placeholders, never real details: `{names}`, `{events}` (one line per
+  function, shaped by `eventLine`), `{venue}`, `{dates}`, `{city}`,
+  `{details}`, `{link}`. The full list and rules are in the
+  [settings reference](spec.md#sharing--settingsshare).
+- Keep it to 6–10 lines. WhatsApp shows about one line of the preview title
+  and two of its description.
+- Don't add a maps link: WhatsApp previews the first link in a message, and
+  the invitation already has directions.
+- Invite-only invitations leave out dates and venue automatically. Check the
+  "Invite-only guest" bubble under **Share message** in the preview.
 
 ## Blocks
 

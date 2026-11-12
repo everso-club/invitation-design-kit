@@ -23,7 +23,8 @@ Bug reports, clearer docs and better tools are very welcome.
 
 ### Generated folders
 
-`engine/`, `preview/`, `examples/kalyana-classic/` and `docs/spec.md` are
+`engine/`, `preview/`, the published examples (all but `kalyana-peacock`),
+`docs/spec.md`, `docs/engines.md` and `docs/artwork/` are
 generated from Everso's main codebase and replaced on every release. Please
 don't edit them in a pull request. Open an issue instead and we'll fix it at
 the source.

@@ -1,0 +1,24 @@
+{
+  "id": "chapel-evergreen",
+  "engine": "chapel",
+  "name": "Chapel · Evergreen",
+  "description": "Church wedding — a green envelope with a wax seal, dates under frosted vellum, stationery cards for each event, candles and white florals.",
+  "tier": "free",
+  "eventTypes": [
+    "Wedding"
+  ],
+  "sortOrder": 20,
+  "featured": false,
+  "thumbnail": "./thumbnail.jpg",
+  "changelog": "First version.",
+  "author": {
+    "name": "Everso",
+    "email": "contact@everso.club",
+    "url": "https://everso.club"
+  },
+  "credits": {
+    "artwork": "Painted for Everso with an image model (Gemini), cut out and finished by hand.",
+    "music": "Pixabay Content License — paulyudin, “Romantic” (#493488)"
+  },
+  "settings": {}
+}

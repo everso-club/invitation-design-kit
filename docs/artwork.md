@@ -66,38 +66,16 @@ grey-and-white checkerboard instead. So:
 4. Check that the model's terms allow commercial use, and say which model
    you used in `credits.artwork`.
 
-The style line used for Kalyana's original artwork:
+**Each engine has its own artwork guide**: the style line and the exact
+prompts behind its original art, every piece with the shape its slot needs,
+and what image models tend to get wrong. They're the same guides Everso
+works from. Start from your engine's:
 
-> Soft realistic gouache painting in the style of a premium South Indian
-> wedding invitation, warm natural light, rich true-to-life textures (brass,
-> banana leaf, jasmine), gentle shadows, muted elegant palette of blush
-> beige, maroon, brass gold and deep leaf green, no text, no watermark, no
-> people. Plain white background, the object only — no borders, no
-> decorative corners, no floral motifs or patterns around it.
+- [Kalyana](artwork/kalyana.md)
+- [Chapel](artwork/chapel.md)
 
-The last sentence matters: without it, models add ornamental borders you
-then have to cut away. Leave it off for the door and the two scenes.
-
-### The prompts behind Kalyana
-
-After the style line. Generate a little larger than the slot, then crop to
-its shape.
-
-| Slot | Background | Prompt |
-|---|---|---|
-| `art.leafLeft` | white | Two tall fresh banana leaves rising from the bottom-left corner and curving upward, slightly torn edges, visible veins |
-| `art.leafRight` | white | Mirror of the left: two tall banana leaves rising from the bottom-right corner |
-| `art.deepa` | white | A tall traditional brass Karnataka samai oil lamp, polished, three unlit wicks, front view, standing upright |
-| `art.coconut` | white | Two tender green coconuts resting on the floor with a soft shadow |
-| `art.basket` | white | A small woven cane basket overflowing with fresh jasmine buds and a few mango leaves |
-| `art.kolam` | white | A white rice-flour kolam (rangoli) pattern on the floor seen in gentle perspective, interlocking loops around dots, a few marigold flowers scattered |
-| `art.thorana` | white | A traditional mango-leaf thorana (door garland) strung horizontally with marigolds and jasmine strands hanging down, small brass bells |
-| `art.door` | full picture | One panel of an old carved teak wood temple-house door, brass studs in a grid, a brass ring handle at the right edge, front view, filling the frame |
-| `art.sceneEvening` | full picture | An evening courtyard for a reception: warm fairy string lights overhead, a large brass urli bowl with floating marigolds, brass lamps lit, jasmine baskets, soft bokeh, lower half detailed, upper third plain dusk sky |
-| `art.sceneDay` | full picture | A traditional South Indian wedding mandap with a sloped tiled roof by calm water at sunset, jasmine strands hanging from the eaves, banana trees on both sides, brass lamps, a petal path leading to it, upper third plain peach sky |
-
-For a new design, change the style line first (palette, medium, mood), then
-the objects.
+(All engines: [engines](engines.md).) For a new design, change the style line
+first (palette, medium, mood), then the objects, and keep the shapes.
 
 ## The thumbnail
 

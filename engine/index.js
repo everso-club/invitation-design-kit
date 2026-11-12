@@ -5,15 +5,34 @@
  * Spec: docs/features/invitations/09-invitation-designs.md.
  */
 import { kalyana } from './kalyana.js';
+import { chapel } from './chapel.js';
+// engines:new — imports above this line
 import { FONTS } from './fonts.js';
 
 export { FONTS, fontFamily, fontsHref } from './fonts.js';
-export { kalyana };
+export { kalyana, chapel };
 
-export const ENGINES = { kalyana };
+export const ENGINES = {
+  kalyana,
+  chapel,
+  // engines:new — entries above this line
+};
 
 export function getEngine(id) {
   return ENGINES[id] || null;
+}
+
+/**
+ * Which engine draws an invitation: the pinned design's engine, else the
+ * engine marker in its frozen settings (the app's live preview sends only
+ * the settings), else the invitation's templateId, else the original Kalyana.
+ * @param {{ templateId?: string, design?: { engine?: string, settings?: Object } }} invitation
+ * @return {string}
+ */
+export function engineOf(invitation) {
+  const d = invitation && invitation.design;
+  const ids = [d && d.engine, d && d.settings && d.settings.engine, invitation && invitation.templateId];
+  return ids.find((id) => typeof id === 'string' && ENGINES[id]) || 'kalyana';
 }
 
 /** All fields of an engine, flattened (section id attached). */
@@ -43,6 +62,7 @@ export function validValue(field, value) {
     case 'choice': return field.options.some((o) => o.value === value);
     case 'toggle': return typeof value === 'boolean';
     case 'text': return typeof value === 'string' && value.length <= (field.max || 200);
+    case 'longText': return typeof value === 'string' && value.length <= (field.max || 1000);
     case 'image':
     case 'audio': return typeof value === 'string' && ASSET.test(value);
     case 'imageSet': return Array.isArray(value) && value.length >= (field.min || 1) && value.length <= (field.max || 50)
@@ -118,3 +138,7 @@ export function publishChecklist(engine, values, meta = {}) {
 }
 
 export { SCENARIOS, previewData } from './samples.js';
+export {
+  SHARE_DEFAULTS, renderShareMessage, renderSharePreview, shareInputFromResolved,
+  fill as fillShareTemplate, cityOf, compactDates, formatDate, formatTime, joinNames,
+} from './share.js';

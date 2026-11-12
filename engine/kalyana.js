@@ -6,18 +6,34 @@
  * so invitations without a design look exactly as before.
  * Spec: docs/features/invitations/09-invitation-designs.md.
  *
- * Field kinds: color · font · image · imageSet · audio · choice · toggle · text.
+ * Field kinds: color · font · image · imageSet · audio · choice · toggle · text ·
+ * longText (multi-line).
  * Image slots carry an aspect (width/height): the layout is drawn around it,
  * so the console only accepts uploads within ±8% of it.
  */
+import { SHARE_DEFAULTS } from './share.js';
+
 const ART = '/invite-templates/kalyana/art';
 
 export const kalyana = {
   id: 'kalyana',
   major: 1,
-  version: '1.1.0',
+  version: '1.2.0',
   name: 'Kalyana',
   description: 'Heritage invitation — opening doors, garlands, scratch-to-reveal dates, falling petals, day/evening scenes.',
+  // How the guest page starts before the invitation's data arrives: the colour
+  // behind the opening (no white flash), the browser bar colour, and the
+  // default artwork the opening paints first (preloaded by index.html).
+  page: {
+    background: '#1E0D05',
+    themeColor: '#2B1409',
+    preload: [`${ART}/teak-door.webp`, `${ART}/thorana.webp`],
+  },
+  // Sample content for design previews: stand-in photos (our own artwork) for
+  // the cover and the album. Kalyana's sample wording is samples.js's default.
+  samples: {
+    photos: [`${ART}/mandap.webp`, `${ART}/reception.webp`, `${ART}/jasmine-basket.webp`, `${ART}/kolam.webp`, `${ART}/coconuts.webp`, `${ART}/deepa.webp`],
+  },
   // Which part of the card to show in the preview while a field is edited.
   sections: [
     {
@@ -97,7 +113,7 @@ export const kalyana = {
       title: 'Wording',
       hint: 'Section titles for this design. Hosts write their own names and lines.',
       fields: [
-        { key: 'wording.tagline', kind: 'text', label: 'Under the names', default: 'are getting married', max: 40, focus: 'names' },
+        { key: 'wording.tagline', kind: 'text', label: 'Under the names', default: 'two hearts, one journey', max: 40, focus: 'names' },
         { key: 'wording.blessings', kind: 'text', label: 'Families section label', default: 'With the blessings of our elders', max: 60, focus: 'families' },
         { key: 'wording.familyLead', kind: 'text', label: 'Default invitation line (hosts can change)', default: 'we joyfully invite you to the wedding of', max: 120, focus: 'families' },
         { key: 'wording.doorLine', kind: 'text', label: 'Default line on the doors (hosts can change)', default: '॥ ಶುಭ ವಿವಾಹ ॥', max: 40, focus: 'doors' },
@@ -109,6 +125,21 @@ export const kalyana = {
         { key: 'wording.rsvpTitle', kind: 'text', label: 'RSVP title', default: 'Will you bless us with your presence?', max: 60, focus: 'rsvp' },
         { key: 'wording.rsvpSub', kind: 'text', label: 'RSVP line', default: 'Your blessings mean the world to us.', max: 80, focus: 'rsvp' },
         { key: 'wording.tapToOpen', kind: 'text', label: 'Door button', default: 'Tap to open', max: 20, focus: 'doors' },
+      ],
+    },
+    {
+      id: 'share',
+      title: 'Sharing (WhatsApp message and link preview)',
+      hint: 'What hosts send with the link, and the card WhatsApp shows for it. Placeholders: {names} {events} {venue} '
+        + '{dates} {city} {details} {link}; in the event line {label} {date} {time} {place} (venue, only when events are at '
+        + 'different places). An empty placeholder next to " · " or "," is removed with it and the line stays; one without '
+        + 'a separator removes its whole line (so "📍 {venue}" disappears when there is no single venue). Invite-only '
+        + 'invitations never show dates or venue. The link is added at the end if left out. Keep it short (6–10 lines).',
+      fields: [
+        { key: 'share.message', kind: 'longText', label: 'Message', default: SHARE_DEFAULTS.message, max: 1000 },
+        { key: 'share.eventLine', kind: 'longText', label: 'Line for each event', default: SHARE_DEFAULTS.eventLine, max: 160 },
+        { key: 'share.previewTitle', kind: 'text', label: 'Link preview — title (one line)', default: SHARE_DEFAULTS.previewTitle, max: 80 },
+        { key: 'share.previewDescription', kind: 'text', label: 'Link preview — description (one line)', default: SHARE_DEFAULTS.previewDescription, max: 160 },
       ],
     },
   ],
